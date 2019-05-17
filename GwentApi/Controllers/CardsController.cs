@@ -78,7 +78,7 @@ namespace GwentApi.Controllers
             _context.Cards.Add(card);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCard", new { id = card.CardId }, card);
+            return CreatedAtAction(nameof(GetCard), new { id = card.CardId }, card);
         }
 
         // DELETE: api/Cards/5

@@ -23,7 +23,6 @@ namespace GwentApi.Models
         [Required(ErrorMessage = "Please enter a card faction")]
         public string Faction { get; set; }
 
-        [Range(1, 20, ErrorMessage = "Please enter a correct card's power")]
         public int Power { get; set; }
 
         [Required]
