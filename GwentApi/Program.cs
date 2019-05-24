@@ -28,7 +28,7 @@ namespace GwentApi
                     var context = services.
                         GetRequiredService<ApplicationDbContext>();
                     context.Database.Migrate();
-                    SeedData.EnsurePopulated(services);
+                    //SeedData.EnsurePopulated(services);
                 }
                 catch (Exception ex)
                 {

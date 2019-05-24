@@ -15,6 +15,7 @@ namespace GwentApi.Models
             using (var context = new ApplicationDbContext(
                 serviceProvider.GetRequiredService<DbContextOptions<ApplicationDbContext>>()))
             {
+                context.Database.EnsureCreated();
                 if (!context.Cards.Any())
                 {
                     context.Cards.AddRange(
